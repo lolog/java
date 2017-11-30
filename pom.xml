@@ -13,6 +13,7 @@
 
   <modules>
     <module>lambda</module>
+    <module>pool</module>
   </modules>
 
   <dependencyManagement>

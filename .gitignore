@@ -26,6 +26,9 @@ hs_err_pid*
 java.iml
 /pool/target/
 /pool/pool.iml
+/pool/.settings/
+/pool/.classpath
+
 /lambda/.settings/
 /lambda/target/
 /lambda/.classpath
