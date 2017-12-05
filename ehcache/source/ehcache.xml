@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ehcache xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="http://ehcache.org/ehcache.xsd">
+
+	<diskStore path="user.dir/cache" /><!--达到内存上限后缓存文件保存位置 -->
+	
+	<!-- 
+		1.maxElementsInMemory:最大内存占用，超出后缓存保存至文件 
+		2.memoryStoreEvictionPolicy:缓存废弃策略，LRU表示最少使用的优先清除，此值对应之前3种策略 
+		3.timeToIdleSeconds:空闲时间，超出此时间未使用缓存自动清除
+		4.timeToLiveSeconds:清除时间，缓存保留的最长时间
+		5.overflowToDisk:是否往硬盘写缓存数据 
+	-->
+	<defaultCache maxElementsInMemory="4" 
+		memoryStoreEvictionPolicy="LRU"
+		eternal="false"
+		timeToIdleSeconds="1"
+		timeToLiveSeconds="5"
+		overflowToDisk="false"
+		diskPersistent="false"/>
+
+		<cache name="cache_test" 
+			memoryStoreEvictionPolicy="LRU"
+			maxElementsInMemory="3"
+			eternal="false"
+			timeToIdleSeconds="10"
+			timeToLiveSeconds="10"
+			overflowToDisk="true" />
+</ehcache> 
