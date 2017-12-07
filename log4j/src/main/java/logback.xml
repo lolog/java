@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<configuration debug="false">
+<configuration>
 	<property name="system.logging.system.dir" value="./log" />
 	<property name="system.logging.system.level" value="debug" />
 	<property name="system.logging.system.size" value="20" />
@@ -7,6 +7,9 @@
 	<property name="system.logging.badWriterDir" value="./log" />
 	<property name="system.badwriter.count" value="10" />
 	<property name="system.badwriter.size" value="100" />
+	
+	<!-- disable logback system log -->
+	<statusListener class="ch.qos.logback.core.status.NopStatusListener" />
 
 	<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
 		<encoder>
@@ -54,11 +57,14 @@
 		</filter>
 	</appender>
 
-	<root level="INFO">
+	<root level="ALL">
 		<appender-ref ref="STDOUT" />
 	</root>
-
 	<logger name="badWriter">
 		<appender-ref ref="badWriter" />
+	</logger>
+	<!-- package -->
+	<logger name="net.log4j">
+		<appender-ref ref="FILE" />
 	</logger>
 </configuration>

@@ -10,7 +10,7 @@ public class App
 	
     public static void main( String[] args )
     {
-    	logger.info("xxx");
-    	badWriter.info("xxx");
+    	logger.info("logger");
+    	badWriter.info("badWriter");
     }
 }
