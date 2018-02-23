@@ -17,6 +17,7 @@
 		<module>ehcache</module>
 		<module>log4j</module>
 		<module>validator</module>
+		<module>assert</module>
 	</modules>
 
 	<dependencyManagement>
