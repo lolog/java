@@ -18,6 +18,7 @@
 		<module>log4j</module>
 		<module>validator</module>
 		<module>assert</module>
+		<module>cpdetector</module><!-- 读取文件编码格式 -->
 	</modules>
 
 	<dependencyManagement>
